@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="superadminBorderPane" maxHeight="600.0" maxWidth="960.0" minHeight="600.0" minWidth="960.0" prefHeight="600.0" prefWidth="960.0" style="-fx-background-color: linear-gradient(to bottom, #8a0000, #000000);" styleClass="root-pane" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dpardo.strike.ui.super_user.SuperAdminController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="viewSelectorComboBox" prefHeight="30.0" prefWidth="94.0" styleClass="combo-box" />
+            <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="userInfoButton" mnemonicParsing="false" onAction="#handleUserInfoClick" styleClass="user-icon-button">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/icons/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                <tooltip>
+                    <Tooltip fx:id="usernameTooltip" />
+                </tooltip>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="sesionesTableView" prefHeight="200.0" prefWidth="200.0" styleClass="superadmin-table-view" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="pidColumn" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="PID" />
+          <TableColumn fx:id="userColumn" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="USUARIO" />
+            <TableColumn fx:id="correoColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="CORREO" />
+            <TableColumn fx:id="fecCreacionColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="FEC_CREACION" />
+            <TableColumn fx:id="rolColumn" maxWidth="80.0" minWidth="80.0" text="ROL" />
+            <TableColumn fx:id="uiColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="UI" />
+            <TableColumn fx:id="direccionIpColumn" maxWidth="80.0" minWidth="80.0" text="DIRECCION_IP" />
+            <TableColumn fx:id="puertoColumn" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="PUERTO" />
+            <TableColumn fx:id="fecAsignacionColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="ASIGNACION_ROL" />
+            <TableColumn fx:id="activoColumn" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="ACTIVO" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" />
+         </BorderPane.margin>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>

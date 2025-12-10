@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="adminBorderPane" maxHeight="600.0" maxWidth="960.0" minHeight="600.0" minWidth="960.0" prefHeight="600.0" prefWidth="960.0" style="-fx-background-color: linear-gradient(to bottom, #8a0000, #000000);" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dpardo.strike.ui.data_writer.HomeAdminController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 10;" styleClass="menu-container" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="viewSelectorAdminComboBox" prefHeight="30.0" prefWidth="100.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ComboBox>
+            <Button fx:id="paisButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMenuClick" styleClass="menu-button" text="PAIS" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="jugadorButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMenuClick" styleClass="menu-button" text="JUGADOR" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="equiposButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMenuClick" styleClass="menu-button" text="EQUIPOS" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="partidoButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMenuClick" styleClass="menu-button" text="PARTIDO" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="ligaButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMenuClick" styleClass="menu-button" text="LIGA" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="editarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMenuClick" styleClass="menu-button" text="EDITAR" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="borrarButton" mnemonicParsing="false" onAction="#handleMenuClick" styleClass="menu-button" text="BORRAR" />
+            <Button fx:id="userInfoadminButton" mnemonicParsing="false" onAction="#handleUserInfoClick" styleClass="user-icon-button">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/icons/user.png" />
+                     </image></ImageView>
+               </graphic>
+                <tooltip>
+                    <Tooltip fx:id="usernameAdminTooltip" />
+                </tooltip>
+            </Button>
+         </children></HBox>
+   </top>
+   <center>
+      <StackPane fx:id="formContainer" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="50.0" left="100.0" right="100.0" />
+         </BorderPane.margin>
+      </StackPane>
+   </center>
+</BorderPane>

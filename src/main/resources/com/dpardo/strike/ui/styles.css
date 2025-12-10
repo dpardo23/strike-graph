@@ -1,0 +1,248 @@
+/* =================================================================== */
+/* ===         HOJA DE ESTILOS PRINCIPAL - PROYECTO STRIKE         === */
+/* =================================================================== */
+
+
+/* ============================================= */
+/* ===       1. ESTILOS GLOBALES             === */
+/* ============================================= */
+
+/* Fondo degradado para las ventanas principales (Admin y Superadmin) */
+.admin-background {
+    -fx-background-color: linear-gradient(to bottom, #8a0000, #000000);
+}
+
+
+/* ============================================= */
+/* ===   2. VISTA PRINCIPAL (HOME-VIEW)      === */
+/* ============================================= */
+
+/* --- Estilos para la Barra Lateral (Sidebar) --- */
+.sidebar {
+    -fx-background-color: transparent;
+}
+.sidebar .scroll-pane {
+    -fx-background-color: transparent;
+}
+.sidebar .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Estilo para el ScrollPane que contiene la lista de países */
+.sidebar-list {
+    -fx-background-color: #1c1c1c;
+}
+.sidebar-list .viewport {
+    -fx-background-color: #1c1c1c;
+}
+.sidebar-list .content {
+    -fx-background-color: transparent;
+}
+
+/* Estilo para cada ítem en la lista de países */
+.country-list-item {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 5;
+    -fx-spacing: 10;
+}
+.country-list-item:hover {
+    -fx-background-color: #460809;
+    -fx-background-radius: 5;
+}
+.country-list-item:pressed {
+    -fx-background-color: #9F0712;
+}
+
+
+/* ============================================= */
+/* ===      3. PANEL DE ADMINISTRACIÓN       === */
+/* ============================================= */
+
+/* --- 4.1. Estilos para el Menú Superior (Home-admin) --- */
+.menu-button {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px 0px 2px 0px;
+    -fx-padding: 6px 12px 6px 12px;
+    -fx-cursor: hand;
+}
+.menu-button:hover {
+    -fx-text-fill: #D4D4D4;
+    -fx-border-color: transparent transparent #460809 transparent;
+}
+
+/* --- 4.2. Estilos para los Formularios Interiores (País, Equipo, etc.) --- */
+.form-label {
+    -fx-text-fill: #B0B0B0;
+    -fx-font-size: 12px;
+    -fx-font-family: "Verdana";
+    -fx-cursor: default;
+    -fx-transition: -fx-text-fill 0.3s ease-in-out;
+}
+.form-label:hover {
+    -fx-text-fill: white;
+}
+
+.text-field, .combo-box {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E0E0E0;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #888888;
+    -fx-border-color: #555;
+    -fx-border-width: 0 0 1 0;
+    -fx-caret-color: #B80000;
+}
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #B80000;
+    -fx-border-width: 0 0 2 0;
+}
+
+.combo-box .arrow-button { -fx-background-color: transparent; }
+.combo-box .arrow { -fx-background-color: #B0B0B0; }
+.combo-box-popup .list-view {
+    -fx-background-color: #1c1c1c;
+    -fx-border-color: #555;
+}
+.combo-box-popup .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+.combo-box-popup .list-cell:hover { -fx-background-color: #B80000; }
+
+.form-button {
+    -fx-background-color: #8a0000;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 12px 25px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+.form-button:hover {
+    -fx-background-color: #E00000;
+    -fx-effect: dropshadow(gaussian, rgba(51,4,4,4), 20, 0, 0, 0);
+    -fx-translate-y: -2;
+}
+
+
+/* ================================================= */
+/* ===    4. VISTA DE SUPERADMINISTRADOR         === */
+/* ================================================= */
+
+/* --- 4.1. Barra Superior y Botón de Usuario --- */
+.superadmin-top-bar {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-border-color: transparent transparent rgba(255, 255, 255, 0.1) transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+.user-icon-button {
+    -fx-background-color: transparent;
+    -fx-padding: 2px;
+    -fx-opacity: 0.7;
+    -fx-transition: all 0.2s ease-in-out;
+}
+.user-icon-button:hover {
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0, 0, 0);
+}
+
+/* --- 4.2. Tabla con Efecto Acrílico --- */
+.superadmin-table-view {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 8;
+    -fx-padding: 1px;
+}
+.superadmin-table-view .placeholder .label {
+    -fx-text-fill: rgba(255, 255, 255, 0.4);
+    -fx-font-size: 14px;
+}
+.superadmin-table-view .column-header-background {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 8 8 0 0;
+}
+.superadmin-table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-transition: all 0.2s ease-in-out;
+}
+.superadmin-table-view .column-header .label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-weight: bold;
+    -fx-padding: 7px;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 7px;
+}
+.superadmin-table-view .column-header:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.6), 15, 0, 0, 0);
+    -fx-cursor: hand;
+}
+.superadmin-table-view .table-cell {
+    -fx-text-fill: #d0d0d0;
+    -fx-border-color: transparent;
+    -fx-padding: 12px;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 12px;
+}
+.superadmin-table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+}
+.superadmin-table-view .table-row-cell:odd {
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+}
+.superadmin-table-view .table-row-cell:selected {
+    -fx-background-color: #B80000;
+}
+.superadmin-table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+.superadmin-table-view .scroll-bar:vertical,
+.superadmin-table-view .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+.superadmin-table-view .scroll-bar .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 5;
+}
+.superadmin-table-view .corner {
+    -fx-background-color: transparent;
+}
+
+/*
+ * Estilo para el efecto Acrílico / Vidrio Esmerilado (Glassmorphism)
+ */
+.acrylic-pane {
+    /* Fondo semitransparente. Juega con el último valor (0.2) para más o menos transparencia. */
+    -fx-background-color: rgba(40, 40, 40, 0.4);
+
+    /* Bordes redondeados para un look más suave */
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+
+    /* Un borde sutil que atrapa la luz, dándole un aspecto de vidrio */
+    -fx-border-width: 1px;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+}
+
+/*
+ * Estilo base para el panel que tendrá la animación.
+ * La animación en sí se controlará desde el código Java.
+ */
+.animated-border-pane {
+    /* Define el grosor del borde que se va a animar */
+    -fx-border-width: 2px;
+
+    /* Bordes redondeados que coinciden con el panel acrílico */
+    -fx-border-radius: 15;
+    -fx-background-radius: 15; /* Asegura que el fondo también sea redondeado */
+}

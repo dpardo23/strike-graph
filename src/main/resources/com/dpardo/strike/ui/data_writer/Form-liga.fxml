@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="formContainer" alignment="CENTER" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #290000; -fx-background-radius: 10; -fx-background-radius: 10;" vgap="4.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dpardo.strike.ui.data_writer.FormLigaController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="60.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints />
+      <RowConstraints />
+  </rowConstraints>
+   <padding>
+      <Insets right="30.0" />
+   </padding>
+   <children>
+      <ImageView fitHeight="254.0" fitWidth="254.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../../../../../images/icons/trofeo.png" />
+         </image></ImageView>
+      <Label styleClass="form-label" text="Identificador" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="identificadorField" maxHeight="20.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Verdana" size="11.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label styleClass="form-label" text="Nombre de la liga" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreLigaField" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label styleClass="form-label" text="País" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="guardarLigaButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="80.0" minHeight="25.0" minWidth="80.0" mnemonicParsing="false" onAction="#handleGuardarLiga" prefHeight="25.0" prefWidth="80.0" styleClass="form-button" text="Guardar" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="14">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="paisComboBox" maxHeight="26.0" maxWidth="225.0" minHeight="26.0" minWidth="225.0" prefHeight="26.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Label fx:id="nombreBanderaLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="form-label" text="Tipo de liga" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ligaComboBox" layoutX="354.0" layoutY="156.0" maxHeight="26.0" maxWidth="225.0" minHeight="26.0" minWidth="225.0" prefHeight="26.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+   </children>
+   <effect>
+      <DropShadow height="60.0" radius="29.5" width="60.0" />
+   </effect>
+</GridPane>

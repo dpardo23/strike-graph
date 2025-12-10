@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="formContainer" alignment="CENTER" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #290000; -fx-background-radius: 10; -fx-background-radius: 10;" vgap="4.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dpardo.strike.ui.data_writer.FormPartidoController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="60.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints />
+      <RowConstraints />
+  </rowConstraints>
+   <padding>
+      <Insets right="30.0" />
+   </padding>
+   <children>
+      <ImageView fitHeight="254.0" fitWidth="254.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../../../../../images/icons/versus.png" />
+         </image></ImageView>
+      <Label styleClass="form-label" text="Equipo local" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label styleClass="form-label" text="Equipo visitante" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label styleClass="form-label" text="Fecha" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="guardarPartidoButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="80.0" minHeight="25.0" minWidth="80.0" mnemonicParsing="false" onAction="#handleGuardarPartido" prefHeight="25.0" prefWidth="80.0" styleClass="form-button" text="Guardar" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="19">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="ligaComboBox" maxHeight="26.0" maxWidth="225.0" minHeight="26.0" minWidth="225.0" prefHeight="26.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+      <Label fx:id="nombreBanderaLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="form-label" text="Hora" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fechaField" layoutX="354.0" layoutY="108.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <font>
+            <Font name="Verdana" size="11.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label fx:id="nombreBanderaLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="354.0" layoutY="256.0" styleClass="form-label" text="Liga" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="13">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="HoraField" layoutX="354.0" layoutY="265.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.columnIndex="1" GridPane.rowIndex="11">
+         <font>
+            <Font name="Verdana" size="11.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label fx:id="nombreBanderaLabel11" alignment="CENTER" contentDisplay="CENTER" layoutX="354.0" layoutY="270.0" styleClass="form-label" text="Número de historial" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="16">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="historialField" layoutX="354.0" layoutY="272.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.columnIndex="1" GridPane.rowIndex="17">
+         <font>
+            <Font name="Verdana" size="11.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <ComboBox fx:id="equipoLocalComboBox" layoutX="354.0" layoutY="156.0" maxHeight="26.0" maxWidth="225.0" minHeight="26.0" minWidth="225.0" prefHeight="26.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <ComboBox fx:id="equipoVisitanteComboBox" layoutX="354.0" layoutY="54.0" maxHeight="26.0" maxWidth="225.0" minHeight="26.0" minWidth="225.0" prefHeight="26.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   </children>
+   <effect>
+      <DropShadow height="60.0" radius="29.5" width="60.0" />
+   </effect>
+</GridPane>

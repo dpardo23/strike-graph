@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="formContainer" alignment="CENTER" hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #290000; -fx-background-radius: 10; -fx-background-radius: 10;" vgap="4.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dpardo.strike.ui.data_writer.FormJugadorController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="15.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="3.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints />
+      <RowConstraints />
+  </rowConstraints>
+   <padding>
+      <Insets left="30.0" right="30.0" />
+   </padding>
+   <children>
+      <Label styleClass="form-label" text="Nombres y Apellidos" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreField" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Verdana" size="11.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label styleClass="form-label" text="Altura (cm)" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="alturaField" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label styleClass="form-label" text="País" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="guardarJugadorButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="80.0" minHeight="25.0" minWidth="80.0" mnemonicParsing="false" onAction="#handleGuardarJugador" prefHeight="25.0" prefWidth="80.0" styleClass="form-button" text="Guardar" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="17">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="paisComboBox" maxHeight="30.0" maxWidth="260.0" minHeight="30.0" minWidth="260.0" prefHeight="30.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
+         <children>
+            <Label fx:id="nombreBanderaLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="form-label" text="Foto" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="elegirFotoButton" maxHeight="15.0" maxWidth="20.0" minHeight="15.0" minWidth="20.0" mnemonicParsing="false" onAction="#handleElegirFoto" prefHeight="15.0" prefWidth="20.0" styleClass="icon-button">
+               <graphic>
+                  <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/icons/carpeta.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="298.0" layoutY="47.0" styleClass="form-label" text="Identificador" textFill="WHITE" GridPane.rowIndex="1">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="identificadorField" layoutX="313.0" layoutY="71.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.rowIndex="2">
+         <font>
+            <Font name="Verdana" size="11.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label layoutX="320.0" layoutY="47.0" styleClass="form-label" text="Sexo" textFill="WHITE" GridPane.rowIndex="4">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="sexoComboBox" layoutX="320.0" layoutY="212.0" maxHeight="30.0" maxWidth="260.0" minHeight="30.0" minWidth="260.0" prefHeight="30.0" prefWidth="260.0" GridPane.rowIndex="5" />
+      <Label layoutX="40.0" layoutY="120.0" styleClass="form-label" text="Fecha de nacimiento" textFill="WHITE" GridPane.rowIndex="10">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fechaNacimientoField" layoutX="320.0" layoutY="144.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.rowIndex="11" />
+      <Label layoutX="40.0" layoutY="192.0" styleClass="form-label" text="Posición" textFill="WHITE" GridPane.rowIndex="13">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="posicionComboBox" layoutX="320.0" layoutY="220.0" maxHeight="30.0" maxWidth="260.0" minHeight="30.0" minWidth="260.0" prefHeight="30.0" prefWidth="260.0" GridPane.rowIndex="14" />
+      <Label layoutX="320.0" layoutY="41.0" styleClass="form-label" text="Peso (kg)" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pesoField" layoutX="320.0" layoutY="58.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <font>
+            <Font name="Verdana" size="11.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label layoutX="40.0" layoutY="38.0" styleClass="form-label" text="Equipo" textFill="WHITE" GridPane.rowIndex="7">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="equipoComboBox" layoutX="40.0" layoutY="112.0" maxHeight="30.0" maxWidth="260.0" minHeight="30.0" minWidth="260.0" prefHeight="30.0" prefWidth="260.0" GridPane.rowIndex="8" />
+      <Label layoutX="40.0" layoutY="275.0" styleClass="form-label" text="Estadísticas" textFill="WHITE" GridPane.rowIndex="16">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="estadisticaField" layoutX="40.0" layoutY="53.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" styleClass="form-label" GridPane.rowIndex="17">
+         <font>
+            <Font name="Verdana" size="11.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+   </children>
+   <effect>
+      <DropShadow height="60.0" radius="29.5" width="60.0" />
+   </effect>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</GridPane>

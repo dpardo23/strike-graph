@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="600.0" maxWidth="960.0" minHeight="600.0" minWidth="960.0" prefHeight="600.0" prefWidth="960.0" style="-fx-background-color: linear-gradient(to bottom, #8a0000, #000000);" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dpardo.strike.ui.login.LoginController">
+    <children>
+        <AnchorPane fx:id="loginPanel" layoutX="330.0" layoutY="92.0" maxHeight="400.0" maxWidth="300.0" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #290000; -fx-border-radius: 30; -fx-background-radius: 30;" AnchorPane.bottomAnchor="92.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="92.0">
+            <children>
+                <ImageView fitHeight="103.0" fitWidth="105.0" layoutX="99.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="30.0">
+                    <image>
+                        <Image url="@../../../../../images/icons/user.png" />
+                    </image>
+                </ImageView>
+
+                <Button fx:id="btnLogin" layoutX="50.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #d32f2f; -fx-text-fill: white; -fx-background-radius: 5;" text="Iniciar Sesión" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                    <font>
+                        <Font name="Verdana Bold" size="12.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#00000080" height="30.0" radius="14.5" width="30.0" />
+                    </effect>
+                </Button>
+
+                <Label layoutX="50.0" layoutY="181.0" text="Nombre de usuario" textFill="WHITE" AnchorPane.leftAnchor="50.0">
+                    <font> <Font name="Verdana Bold" size="11.0" /> </font>
+                </Label>
+                <TextField fx:id="tf_username" layoutX="50.0" layoutY="199.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 5;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+
+                <Label layoutX="50.0" layoutY="243.0" text="Contraseña" textFill="WHITE" AnchorPane.leftAnchor="50.0">
+                    <font> <Font name="Verdana Bold" size="11.0" /> </font>
+                </Label>
+                <PasswordField fx:id="pf_password" layoutX="50.0" layoutY="259.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 5;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+            </children>
+            <effect>
+                <DropShadow color="#000000" height="50.0" radius="24.5" width="50.0" />
+            </effect>
+        </AnchorPane>
+    </children>
+</AnchorPane>
