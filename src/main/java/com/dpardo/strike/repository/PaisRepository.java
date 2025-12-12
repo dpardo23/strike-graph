@@ -15,7 +15,6 @@ public class PaisRepository {
     private final LogRepository logger = new LogRepository();
 
     public List<Pais> findAll() {
-        // ... (código igual al anterior) ...
         Driver driver = DatabaseConnection.getDriver();
         List<Pais> paises = new ArrayList<>();
         String query = "MATCH (p:Pais) RETURN p.cod_fifa, p.nombre, p.continente ORDER BY p.nombre";
